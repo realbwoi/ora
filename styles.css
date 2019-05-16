@@ -1,0 +1,345 @@
+html {
+  scroll-behavior: smooth;
+  transition: ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  color: #ECF2E8;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #092140;
+  color: #ECF2E8;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+}
+
+.container {
+  padding: 30px 0;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+li a, h1, h2, h3 {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+
+/* ---HEADER SECTION--- */
+
+.hero-container {
+  position: relative;
+  height: calc(100vh - 48px);
+}
+
+header {
+  margin: 0;
+  background: rgba(9, 33, 64, 0.1);
+}
+
+.nav-wrapper ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 48px;
+  width: 100%;
+}
+
+li a {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: 90ms ease-in-out;
+  margin: 0 16px;
+  padding-bottom: 8px;
+  letter-spacing: 1px;
+  color: #f24738;
+}
+
+li a:hover {
+  border-bottom: 1px solid white;
+}
+
+.hero-content {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: calc(50% - 48px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 48px;
+  border: 1px solid white;
+}
+
+.about-img {
+  display: flex;
+  justify-content: center;
+}
+
+.about-img img {
+  width: 200px;
+  height: 200px;
+  box-shadow:
+    0 0 0 0px #092140;
+}
+
+.logo {
+  color: #ECF2E8;
+  font-size: 64px;
+  padding-left: 64px;
+  font-family: 'Work Sans', serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.logo-name {
+  line-height: initial;
+}
+
+.logo-span {
+  font-size: 16px;
+  line-height: 48px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: #f24738;
+}
+
+.arrow {
+  position: absolute;
+  display: inline-block;
+  height: 50px;
+  width: 56px;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: 125ms ease-in-out;
+}
+
+.arrow::before {
+  position: absolute;
+  content: "";
+  border-left: 2px solid white;
+  height: 48px;
+  width: 0;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arrow::after {
+  position: absolute;
+  content: "";
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  height: 20px;
+  width: 20px;
+  left: calc(50% - 11px);
+  transform: translateX(-50%);
+  transform: rotate(-45deg);
+  bottom: 5px;
+}
+
+.arrow:hover {
+  bottom: 40px;
+}
+
+.arrow::before .arrow:hover {
+  border-left: 2px solid #f24738;
+}
+
+.arrow:hover .arrow::after {
+  border-left: 2px solid #f24738;
+  border-bottom: 2px solid #f24738;
+}
+
+
+/* ---ABOUT SECTION--- */
+.about-container {
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, .9),
+      rgba(255, 255, 255, .9)
+    ),
+    url("https://images.pexels.com/photos/158771/notebook-pen-table-blank-158771.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  padding: 80px 0px;
+  display: flex;
+  flex-direction: column;
+  color: #2f2f2f;
+}
+
+.about-container h2 {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.about-body {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.about-body p,
+.about-contact p{
+  text-align: center;
+  font-size: 16px;
+}
+
+.about-body p strong {
+  color: #f24738;
+  font-weight: 400;
+}
+
+.about-skills {
+  margin: 48px 0;
+}
+
+.skills-header {
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.skills-img {
+  display: grid;
+  justify-items: center;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  grid-row-gap: 16px;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.skills img {
+  max-width: 64px;
+  width: 100%;
+}
+
+.about-contact a {
+  font-size: 1.17em;
+  color: #f24738;
+  font-weight: 700;
+}
+
+
+
+
+
+/* ---PROJECTS SECTION--- */
+.projects-container {
+  background:
+    linear-gradient(
+      rgba(9, 33, 64, 0.7),
+      rgba(9, 33, 64, 0.7)
+    ),
+    url(https://static.pexels.com/photos/89786/cup-of-coffee-laptop-office-macbook-89786.jpeg);
+  background-size: cover;
+  padding: 160px 30px;
+}
+
+.projects-container h2 {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.item-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 40px;
+  width: 960px;
+  margin: 0 auto;
+}
+
+.item-wrap {
+  display: block;
+}
+
+.items {
+  background-color: #ECF2E8;
+  padding: 16px;
+  color: #2f2f2f;
+  border-radius: 4px;
+  transition: 125ms ease-in;
+}
+
+.item-img img {
+  width: 100%;
+}
+
+.items:hover {
+  transform: scale(1.175);
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* ---CONTACT SECTION--- */
+.contact-container {
+  background: #f24738;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-container h2 {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.contact-container p {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.contact-container a {
+  font-size: 50px;
+  margin: 0 20px;
+}
+
+
+
+
+/* ---FOOTER SECTION--- */
+footer {
+  background: #092140;
+  text-align: center;
+  padding: 10px 0;
+}
